@@ -1,0 +1,17 @@
+{
+    "name": "Image Downloader",
+    "description": "Downloads every image in a web page with the original name.",
+    "version": "1",
+    "permissions": ["<all_urls>", "contextMenus", "activeTabs"],
+    "manifest_version": 2 ,
+    "icons": {
+        "128": "image-downloader.png"
+      },
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [{
+        "matches" : ["<all_urls>"],
+        "js" : ["index.js"]
+    }]
+}
